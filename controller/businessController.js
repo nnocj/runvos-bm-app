@@ -27,13 +27,42 @@ async function getBusinessById(req, res) {
 };
 
 // Create a new business
+// Create a new business or multiple businesses under one user
 async function postBusiness(req, res) {
-  const db = await connectToDB();
-  const business = req.body;
+  try {
+    const db = await connectToDB();
+    const { userId, businesses } = req.body;
 
-  const result = await db.collection('businesses').insertOne(business);
-  res.status(201).json(result);
-};
+    // Validate required fields
+    if (!userId || !Array.isArray(businesses) || businesses.length === 0) {
+      return res.status(400).json({
+        status: 'fail',
+        message: 'userId and at least one business are required',
+      });
+    }
+
+    // Add userId to each business
+    const businessesWithUserId = businesses.map((biz) => ({
+      ...biz,
+      userId: new ObjectId(userId),
+    }));
+
+    // Insert many businesses
+    const result = await db.collection('businesses').insertMany(businessesWithUserId);
+
+    res.status(201).json({
+      status: 'success',
+      insertedCount: result.insertedCount,
+      insertedIds: result.insertedIds,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      status: 'error',
+      message: 'Internal server error',
+    });
+  }
+}
 
 // Update an existing business
 async function putBusiness(req, res) {
