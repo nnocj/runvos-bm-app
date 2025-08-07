@@ -77,22 +77,47 @@ async function putBusiness(req, res) {
   const db = await connectToDB();
   const id = req.params.id;
 
+  // Validate ID format
   if (!ObjectId.isValid(id)) {
     return res.status(400).json({ message: 'Invalid ID format' });
   }
 
-  const updatedBusiness = req.body;
+  const { userId, businesses } = req.body;
+
+  // Validate input
+  if (!userId || !Array.isArray(businesses) || businesses.length === 0) {
+    return res.status(400).json({
+      status: 'fail',
+      message: 'userId and at least one business are required',
+    });
+  }
+
+  let objectUserId;
+  try {
+    objectUserId = new ObjectId(userId);
+  } catch (err) {
+    return res.status(400).json({
+      status: 'fail',
+      message: 'Invalid userId format. Must be a valid ObjectId.',
+    });
+  }
+
+  const updatedDocument = {
+    userId: objectUserId,
+    businesses: businesses,
+  };
 
   const result = await db.collection('businesses').replaceOne(
-   id, updatedBusiness
+    { _id: new ObjectId(id) },
+    updatedDocument
   );
 
   if (result.matchedCount === 0) {
     return res.status(404).json({ message: 'Business not found' });
   }
 
-  res.status(204).end();
-};
+  res.status(204).end(); // No Content
+}
 
 // Delete a business
 async function deleteBusiness(req, res) {
