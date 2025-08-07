@@ -213,51 +213,41 @@
         "type": "object",
         "properties": {
           "firstName": {
-            "type": "string",
-            "example": "John"
+            "type": "string"
           },
           "lastName": {
-            "type": "string",
-            "example": "Doe"
+            "type": "string"
           },
           "email": {
             "type": "string",
-            "format": "email",
-            "example": "doe@example.com"
+            "format": "email"
           },
           "address": {
             "type": "object",
             "properties": {
               "street": {
-                "type": "string",
-                "example": "123 Main St"
+                "type": "string"
               },
               "city": {
-                "type": "string",
-                "example": "Anytown"
+                "type": "string"
               },
               "state": {
-                "type": "string",
-                "example": "CA"
+                "type": "string"
               },
               "zip": {
-                "type": "string",
-                "example": "12345"
+                "type": "string"
               }
             }
           },
           "phone": {
-            "type": "string",
-            "example": "555-1234"
+            "type": "string"
           },
           "birthdate": {
             "type": "string",
-            "format": "date",
-            "example": "1990-01-01"
+            "format": "date"
           },
           "gender": {
-            "type": "string",
-            "example": "male"
+            "type": "string"
           }
         },
         "required": ["firstName", "lastName", "email"]
@@ -266,8 +256,7 @@
         "type": "object",
         "properties": {
           "userId": {
-            "type": "string",
-            "example": "6893a7d6e87f4023c2f9efa3"
+            "type": "string"
           },
           "businesses": {
             "type": "array",
@@ -275,25 +264,20 @@
               "type": "object",
               "properties": {
                 "businessName": {
-                  "type": "string",
-                  "example": "Jane's Art Gallery"
+                  "type": "string"
                 },
                 "description": {
-                  "type": "string",
-                  "example": "An art space showcasing modern and abstract artwork."
+                  "type": "string"
                 },
                 "location": {
-                  "type": "string",
-                  "example": "321 Canvas Ln, Othertown, NY"
+                  "type": "string"
                 },
                 "dateEstablished": {
                   "type": "string",
-                  "format": "date",
-                  "example": "2016-09-15"
+                  "format": "date"
                 },
                 "contact": {
-                  "type": "string",
-                  "example": "555-1122"
+                  "type": "string"
                 }
               },
               "required": ["businessName", "description", "location", "dateEstablished", "contact"]
