@@ -3,18 +3,12 @@ const { body, validationResult } = require('express-validator');
 // business validation rules
 const businessValidationRules = () => {
   return [
-    body('businessName')
+    body('userId')
       .notEmpty()
-      .withMessage('Business name is required'),
-    body('description')
+      .withMessage('User ID is required'),
+    body('businesses')
       .notEmpty()
-      .withMessage('Description is required'),
-    body('location')
-      .notEmpty()
-      .withMessage('Business location is required'),
-    body('contact')
-      .notEmpty()
-      .withMessage('Contact information is required')
+      .withMessage('At least one business is required'),
   ];
 };
 
