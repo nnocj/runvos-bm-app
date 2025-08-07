@@ -1,0 +1,144 @@
+[
+  { 
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "doe@example.com",
+    "address": {
+      "street": "123 Main St",
+      "city": "Anytown",
+      "state": "CA",
+      "zip": "12345"
+    },
+    "phone": "555-1234",
+    "birthdate": "1990-01-01",
+    "gender": "male"
+    },
+    {
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "email": "smith@example.com",
+    "address": {
+      "street": "456 Elm St",
+      "city": "Othertown",
+      "state": "NY",
+      "zip": "67890"
+    },
+    "phone": "555-5678",
+    "birthdate": "1992-02-02",
+    "gender": "female"
+  },
+  {
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "email": "johnson@example.com",
+    "address": {
+      "street": "789 Oak St",
+      "city": "Thirdtown",
+      "state": "TX",
+      "zip": "13579"
+    },
+    "phone": "555-9012",
+    "birthdate": "1995-03-03",
+    "gender": "female"
+  },
+  {
+    "firstName": "Bob",
+    "lastName": "Brown",
+    "email": "brown@example.com",
+    "address": {
+      "street": "321 Pine St",
+      "city": "Fourthtown",
+      "state": "FL",
+      "zip": "24680"
+    },
+    "phone": "555-3456",
+    "birthdate": "1998-04-04",
+    "gender": "male"
+  },
+  {
+    "firstName": "Charlie",
+    "lastName": "Davis",
+    "email": "davis@example.com",
+    "address": {
+      "street": "654 Maple St",
+      "city": "Fifthtown",
+      "state": "WA",
+      "zip": "98765"
+    },
+    "phone": "555-7890",
+    "birthdate": "2000-05-05",
+    "gender": "male"
+  },
+  {
+    "firstName": "Eve",
+    "lastName": "White",
+    "email": "white@example.com",
+    "address": {
+      "street": "987 Cedar St",
+      "city": "Sixthtown",
+      "state": "OR",
+      "zip": "54321"
+    },
+    "phone": "555-2345",
+    "birthdate": "1995-06-06",
+    "gender": "female"
+  },
+  {
+    "firstName": "Frank",
+    "lastName": "Green",
+    "email": "green@example.com",
+    "address": {
+      "street": "654 Spruce St",
+      "city": "Seventhtown",
+      "state": "NV",
+      "zip": "13579"
+    },
+    "phone": "555-6789",
+    "birthdate": "1990-07-07",
+    "gender": "male"
+  },
+  { 
+    "firstName": "Grace",
+    "lastName": "Black",
+    "email": "black@example.com",
+    "address": {
+      "street": "321 Birch St",
+      "city": "Eighttown",
+      "state": "UT",
+      "zip": "86420"
+    },
+    "phone": "555-4321",
+    "birthdate": "1993-08-08",
+    "gender": "female"
+  },
+  {
+    "firstName": "Hank",
+    "lastName": "Blue",
+    "email": "blue@example.com",
+    "address": {
+      "street": "123 Willow St",
+      "city": "Ninethtown",
+      "state": "ID",
+      "zip": "56789"
+    },
+    "phone": "555-8765",
+    "birthdate": "1991-09-09",
+    "gender": "male"
+  },
+  {
+    "firstName": "Ivy",
+    "lastName": "Purple",
+    "email": "purple@example.com",
+    "address": {
+      "street": "987 Willow St",
+      "city": "Tenthown",
+      "state": "MT",
+      "zip": "67890"
+    },
+    "phone": "555-4321",
+    "birthdate": "1994-10-10",
+    "gender": "female"
+  }
+]
+
+

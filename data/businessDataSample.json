@@ -1,0 +1,116 @@
+[
+  {
+    "userId": { "$oid": "6893a7d6e87f4023c2f9efa2" },
+    "businesses": [
+      {
+        "businessName": "Doe's Coffee House",
+        "description": "A cozy coffee shop serving locally sourced brews and pastries.",
+        "location": "456 Brew St, Anytown, CA",
+        "dateEstablished": "2015-03-20",
+        "contact": "555-9876"
+      },
+      {
+        "businessName": "TechNest Solutions",
+        "description": "A tech consulting startup focused on small business digital transformation.",
+        "location": "789 Silicon Ave, Anytown, CA",
+        "dateEstablished": "2018-07-10",
+        "contact": "555-4321"
+      }
+    ]
+  },
+  {
+    "userId": { "$oid": "6893a7d6e87f4023c2f9efa3" },
+    "businesses": [
+      {
+        "businessName": "Jane's Art Gallery",
+        "description": "An art space showcasing modern and abstract artwork.",
+        "location": "321 Canvas Ln, Othertown, NY",
+        "dateEstablished": "2016-09-15",
+        "contact": "555-1122"
+      },
+      {
+        "businessName": "Smith Consulting Group",
+        "description": "Business development and market research services.",
+        "location": "654 Insight Rd, Othertown, NY",
+        "dateEstablished": "2020-01-05",
+        "contact": "555-3344"
+      }
+    ]
+  },
+  {
+    "userId": { "$oid": "6893a7d6e87f4023c2f9efa4" },
+    "businesses": [
+      {
+        "businessName": "Alice's Organic Market",
+        "description": "A store offering organic produce and sustainable products.",
+        "location": "111 Greenway, Thirdtown, TX",
+        "dateEstablished": "2019-04-22",
+        "contact": "555-7788"
+      },
+      {
+        "businessName": "Johnson Fitness Studio",
+        "description": "Fitness and wellness center for women.",
+        "location": "222 Wellness Blvd, Thirdtown, TX",
+        "dateEstablished": "2021-06-12",
+        "contact": "555-8899"
+      }
+    ]
+  },
+  {
+    "userId": { "$oid": "6893a7d6e87f4023c2f9efa7" },
+    "businesses": [
+      {
+        "businessName": "Eve's Flower Boutique",
+        "description": "A boutique specializing in floral arrangements for all occasions.",
+        "location": "333 Bloom St, Sixthtown, OR",
+        "dateEstablished": "2017-11-30",
+        "contact": "555-1212"
+      },
+      {
+        "businessName": "White Event Planning",
+        "description": "Professional event planning and coordination services.",
+        "location": "444 Party Rd, Sixthtown, OR",
+        "dateEstablished": "2020-05-18",
+        "contact": "555-3434"
+      }
+    ]
+  },
+  {
+    "userId": { "$oid": "6893a7d6e87f4023c2f9efa9" },
+    "businesses": [
+      {
+        "businessName": "Grace's Bookstore",
+        "description": "Independent bookstore featuring local authors and events.",
+        "location": "555 Story Ave, Eighttown, UT",
+        "dateEstablished": "2014-08-01",
+        "contact": "555-5656"
+      },
+      {
+        "businessName": "Black Design Studio",
+        "description": "A graphic design agency serving startups and creatives.",
+        "location": "666 Creative Ln, Eighttown, UT",
+        "dateEstablished": "2019-12-10",
+        "contact": "555-7878"
+      }
+    ]
+  },
+  {
+    "userId": { "$oid": "6893a7d6e87f4023c2f9efab" },
+    "businesses": [
+      {
+        "businessName": "Ivy's Vegan Kitchen",
+        "description": "Plant-based meal delivery and catering services.",
+        "location": "777 Pure St, Tenthown, MT",
+        "dateEstablished": "2021-02-14",
+        "contact": "555-6767"
+      },
+      {
+        "businessName": "Purple Wellness Spa",
+        "description": "Luxury spa with holistic therapies and massages.",
+        "location": "888 Calm Blvd, Tenthown, MT",
+        "dateEstablished": "2017-07-20",
+        "contact": "555-9898"
+      }
+    ]
+  }
+]

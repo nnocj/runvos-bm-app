@@ -1,0 +1,22 @@
+{
+  "name": "cse341-w3-w4",
+  "version": "1.0.0",
+  "description": "An API to store users and their businesses",
+  "main": "public/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "commonjs",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "mongodb": "^6.18.0",
+    "path": "^0.12.7",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
