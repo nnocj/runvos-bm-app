@@ -14,7 +14,7 @@ let db;
 async function connectToDB() {
   if (!db) {
     await client.connect();
-    db = client.db('cse-341-w3-w4'); // Use the database name from your .env file
+    db = client.db('cse341-w3-w4'); // Use the database name from your .env file
     console.log('Connected to the database');
   }
   return db;
