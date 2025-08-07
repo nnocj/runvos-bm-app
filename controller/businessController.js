@@ -41,19 +41,9 @@ async function postBusiness(req, res) {
       });
     }
 
-    let objectUserId;
-    try {
-      objectUserId = new ObjectId(userId);
-    } catch (err) {
-      return res.status(400).json({
-        status: 'fail',
-        message: 'Invalid userId format. Must be a valid ObjectId.',
-      });
-    }
-
     const businessesWithUserId = businesses.map((biz) => ({
       ...biz,
-      userId: objectUserId,
+      userId
     }));
 
     const result = await db.collection('businesses').insertMany(businessesWithUserId);
