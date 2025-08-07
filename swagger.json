@@ -7,8 +7,8 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3000",
-      "description": "Local server"
+      "url": "https://cse341-w3-w4-f3w3.onrender.com",
+      "description": "Production server"
     }
   ],
   "paths": {
