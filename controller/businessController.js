@@ -75,8 +75,7 @@ async function putBusiness(req, res) {
   const updatedBusiness = req.body;
 
   const result = await db.collection('businesses').replaceOne(
-    { _id: new ObjectId(id) },
-    updatedBusiness
+   id, updatedBusiness
   );
 
   if (result.matchedCount === 0) {
