@@ -29,6 +29,8 @@ async function getBusinessById(req, res) {
 // Create a new business
 // Create a new business or multiple businesses under one user
 
+const { ObjectId } = require('mongodb');
+
 async function postBusiness(req, res) {
   try {
     const db = await connectToDB();
@@ -41,17 +43,26 @@ async function postBusiness(req, res) {
       });
     }
 
-    const businessesWithUserId = businesses.map((biz) => ({
-      ...biz,
-      userId
-    }));
+    let objectUserId;
+    try {
+      objectUserId = new ObjectId(userId);
+    } catch (err) {
+      return res.status(400).json({
+        status: 'fail',
+        message: 'Invalid userId format. Must be a valid ObjectId.',
+      });
+    }
 
-    const result = await db.collection('businesses').insertMany(businessesWithUserId);
+    const document = {
+      userId: objectUserId,
+      businesses: businesses,
+    };
+
+    const result = await db.collection('businesses').insertOne(document);
 
     res.status(201).json({
       status: 'success',
-      insertedCount: result.insertedCount,
-      insertedIds: result.insertedIds,
+      insertedId: result.insertedId,
     });
   } catch (error) {
     console.error('Server error in postBusiness:', error.message);
