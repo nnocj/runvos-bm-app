@@ -28,7 +28,6 @@ async function getBusinessById(req, res) {
 
 // Create a new business
 // Create a new business or multiple businesses under one user
-const { ObjectId } = require('mongodb');
 
 async function postBusiness(req, res) {
   try {
