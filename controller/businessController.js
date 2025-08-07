@@ -28,12 +28,13 @@ async function getBusinessById(req, res) {
 
 // Create a new business
 // Create a new business or multiple businesses under one user
+const { ObjectId } = require('mongodb');
+
 async function postBusiness(req, res) {
   try {
     const db = await connectToDB();
     const { userId, businesses } = req.body;
 
-    // Validate required fields
     if (!userId || !Array.isArray(businesses) || businesses.length === 0) {
       return res.status(400).json({
         status: 'fail',
@@ -41,13 +42,21 @@ async function postBusiness(req, res) {
       });
     }
 
-    // Add userId to each business
+    let objectUserId;
+    try {
+      objectUserId = new ObjectId(userId);
+    } catch (err) {
+      return res.status(400).json({
+        status: 'fail',
+        message: 'Invalid userId format. Must be a valid ObjectId.',
+      });
+    }
+
     const businessesWithUserId = businesses.map((biz) => ({
       ...biz,
-      userId: new ObjectId(userId),
+      userId: objectUserId,
     }));
 
-    // Insert many businesses
     const result = await db.collection('businesses').insertMany(businessesWithUserId);
 
     res.status(201).json({
@@ -56,13 +65,14 @@ async function postBusiness(req, res) {
       insertedIds: result.insertedIds,
     });
   } catch (error) {
-    console.error(error);
+    console.error('Server error in postBusiness:', error.message);
     res.status(500).json({
       status: 'error',
       message: 'Internal server error',
     });
   }
 }
+
 
 // Update an existing business
 async function putBusiness(req, res) {
