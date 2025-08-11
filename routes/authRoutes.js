@@ -2,7 +2,7 @@ const express = require('express');
 const passport = require('passport');
 const bcrypt = require('bcrypt');
 const User = require('../models/User'); // your MongoDB User model
-const { generateTokens } = require('../utils/token');
+const { generateTokens } = require('../middleware/token');
 
 const router = express.Router();
 
