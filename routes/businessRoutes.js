@@ -21,7 +21,7 @@ router.put('/:id', businessValidate.businessValidationRules(), businessValidate.
 router.delete('/:id', errorHandler.generalHandleErrors(businessController.deleteBusiness));
 
 //I deliberately decided to use the middleware instead of the id as parts of efforts to avoid repetition
-router.get('/my-businesses', jwtVerify.verifyJWT(), businessController.getBusinessesByUserId);
+router.get('/my-businesses', jwtVerify.verifyJWT(), errorHandler.generalHandleErrors(businessController.getBusinessesByUserId));
 
 
 module.exports = router;
