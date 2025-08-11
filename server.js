@@ -7,7 +7,8 @@ require('dotenv').config();
 const swaggerDocument = JSON.parse(fs.readFileSync('./swagger.json', 'utf8'));
 const userRoutes = require('./routes/userRoutes.js');
 const businessRoutes = require('./routes/businessRoutes');
-const passport = require('./passport.js');
+const passport = require('passport');// the need to recall it here
+require('./config/passport.js');
 const authRoutes = require('./routes/authRoutes');
 const productRoutes = require('./routes/productRoutes.js');
 const serviceRoutes = require('./routes/serviceRoutes.js');
