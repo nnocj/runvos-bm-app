@@ -2,6 +2,7 @@ const router =  new require('express').Router();
 const businessController = require('../controller/businessController');
 const businessValidate = require('../utilities/validateBusiness.js');
 const  errorHandler = require('../middleware/handleErrors');
+const jwtVerify = require('../middleware/jwt.js');
 
 // Serve static files from the public folder
 // This endpoint retrieves all businesses from the MongoDB database
@@ -18,5 +19,9 @@ router.put('/:id', businessValidate.businessValidationRules(), businessValidate.
 
 // This endpoint deletes a business from the MongoDB database based on the id
 router.delete('/:id', errorHandler.generalHandleErrors(businessController.deleteBusiness));
+
+//I deliberately decided to use the middleware instead of the id as parts of efforts to avoid repetition
+router.get('/my-businesses', jwtVerify.verifyJWT(), businessController.getBusinessesByUserId);
+
 
 module.exports = router;

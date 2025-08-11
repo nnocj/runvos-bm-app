@@ -1,0 +1,144 @@
+[{
+  "_id": {
+    "$oid": "689a67980b0ffefbbd9f8fcd"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc1"
+  },
+  "name": "Business Strategy Toolkit",
+  "description": "Comprehensive guide and templates for business planning",
+  "price": 199.99,
+  "stock": 50
+},
+{
+  "_id": {
+    "$oid": "689a67980b0ffefbbd9f8fce"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc1"
+  },
+  "name": "IT Infrastructure Audit Package",
+  "description": "Full review of company's IT systems and security",
+  "price": 499.99,
+  "stock": 20
+},
+{
+  "_id": {
+    "$oid": "689a67980b0ffefbbd9f8fcf"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc2"
+  },
+  "name": "Custom CRM Software",
+  "description": "Tailored CRM system for small businesses",
+  "price": 2999.99,
+  "stock": 5
+},
+{
+  "_id": {
+    "$oid": "689a67980b0ffefbbd9f8fd0"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc3"
+  },
+  "name": "Artisan Sourdough Bread",
+  "description": "Freshly baked sourdough with organic ingredients",
+  "price": 5.99,
+  "stock": 200
+},
+{
+  "_id": {
+    "$oid": "689a67980b0ffefbbd9f8fd1"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc3"
+  },
+  "name": "Chocolate Croissant",
+  "description": "Flaky pastry filled with rich chocolate",
+  "price": 3.5,
+  "stock": 150
+},
+{
+  "_id": {
+    "$oid": "689a67980b0ffefbbd9f8fd2"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc4"
+  },
+  "name": "Adjustable Dumbbells Set",
+  "description": "Compact dumbbell set with multiple weight settings",
+  "price": 249.99,
+  "stock": 30
+},
+{
+  "_id": {
+    "$oid": "689a67980b0ffefbbd9f8fd3"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc5"
+  },
+  "name": "4K Drone Camera",
+  "description": "High-resolution drone for aerial videography",
+  "price": 899.99,
+  "stock": 15
+},
+{
+  "_id": {
+    "$oid": "689a67980b0ffefbbd9f8fd4"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc6"
+  },
+  "name": "Brake Pad Replacement Kit",
+  "description": "OEM-quality brake pads for various car models",
+  "price": 79.99,
+  "stock": 100
+},
+{
+  "_id": {
+    "$oid": "689a67980b0ffefbbd9f8fd5"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc7"
+  },
+  "name": "Organic Grass Seed Mix",
+  "description": "Premium seed blend for lush green lawns",
+  "price": 25.99,
+  "stock": 300
+},
+{
+  "_id": {
+    "$oid": "689a67980b0ffefbbd9f8fd6"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc8"
+  },
+  "name": "Leather Handbag",
+  "description": "Genuine leather handbag with gold-tone accents",
+  "price": 149.99,
+  "stock": 40
+},
+{
+  "_id": {
+    "$oid": "689a67980b0ffefbbd9f8fd7"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc9"
+  },
+  "name": "Premium Bus Ticket",
+  "description": "Comfortable long-distance bus ride with WiFi",
+  "price": 39.99,
+  "stock": 500
+},
+{
+  "_id": {
+    "$oid": "689a67980b0ffefbbd9f8fd8"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fca"
+  },
+  "name": "Handmade Ceramic Vase",
+  "description": "Beautifully crafted vase from local artisans",
+  "price": 45,
+  "stock": 25
+}]

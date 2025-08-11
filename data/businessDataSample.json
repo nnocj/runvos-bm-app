@@ -1,116 +1,130 @@
-[
-  {
-    "userId": { "$oid": "6893a7d6e87f4023c2f9efa2" },
-    "businesses": [
-      {
-        "businessName": "Doe's Coffee House",
-        "description": "A cozy coffee shop serving locally sourced brews and pastries.",
-        "location": "456 Brew St, Anytown, CA",
-        "dateEstablished": "2015-03-20",
-        "contact": "555-9876"
-      },
-      {
-        "businessName": "TechNest Solutions",
-        "description": "A tech consulting startup focused on small business digital transformation.",
-        "location": "789 Silicon Ave, Anytown, CA",
-        "dateEstablished": "2018-07-10",
-        "contact": "555-4321"
-      }
-    ]
+[{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc1"
   },
-  {
-    "userId": { "$oid": "6893a7d6e87f4023c2f9efa3" },
-    "businesses": [
-      {
-        "businessName": "Jane's Art Gallery",
-        "description": "An art space showcasing modern and abstract artwork.",
-        "location": "321 Canvas Ln, Othertown, NY",
-        "dateEstablished": "2016-09-15",
-        "contact": "555-1122"
-      },
-      {
-        "businessName": "Smith Consulting Group",
-        "description": "Business development and market research services.",
-        "location": "654 Insight Rd, Othertown, NY",
-        "dateEstablished": "2020-01-05",
-        "contact": "555-3344"
-      }
-    ]
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fb6"
   },
-  {
-    "userId": { "$oid": "6893a7d6e87f4023c2f9efa4" },
-    "businesses": [
-      {
-        "businessName": "Alice's Organic Market",
-        "description": "A store offering organic produce and sustainable products.",
-        "location": "111 Greenway, Thirdtown, TX",
-        "dateEstablished": "2019-04-22",
-        "contact": "555-7788"
-      },
-      {
-        "businessName": "Johnson Fitness Studio",
-        "description": "Fitness and wellness center for women.",
-        "location": "222 Wellness Blvd, Thirdtown, TX",
-        "dateEstablished": "2021-06-12",
-        "contact": "555-8899"
-      }
-    ]
+  "businessName": "Doe Consulting",
+  "description": "IT and business strategy consulting services",
+  "location": "San Francisco, CA",
+  "dateEstablished": "2015-04-15",
+  "contact": "contact@doeconsulting.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc2"
   },
-  {
-    "userId": { "$oid": "6893a7d6e87f4023c2f9efa7" },
-    "businesses": [
-      {
-        "businessName": "Eve's Flower Boutique",
-        "description": "A boutique specializing in floral arrangements for all occasions.",
-        "location": "333 Bloom St, Sixthtown, OR",
-        "dateEstablished": "2017-11-30",
-        "contact": "555-1212"
-      },
-      {
-        "businessName": "White Event Planning",
-        "description": "Professional event planning and coordination services.",
-        "location": "444 Party Rd, Sixthtown, OR",
-        "dateEstablished": "2020-05-18",
-        "contact": "555-3434"
-      }
-    ]
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fb6"
   },
-  {
-    "userId": { "$oid": "6893a7d6e87f4023c2f9efa9" },
-    "businesses": [
-      {
-        "businessName": "Grace's Bookstore",
-        "description": "Independent bookstore featuring local authors and events.",
-        "location": "555 Story Ave, Eighttown, UT",
-        "dateEstablished": "2014-08-01",
-        "contact": "555-5656"
-      },
-      {
-        "businessName": "Black Design Studio",
-        "description": "A graphic design agency serving startups and creatives.",
-        "location": "666 Creative Ln, Eighttown, UT",
-        "dateEstablished": "2019-12-10",
-        "contact": "555-7878"
-      }
-    ]
+  "businessName": "Doe Tech Solutions",
+  "description": "Custom software development for small businesses",
+  "location": "Los Angeles, CA",
+  "dateEstablished": "2018-07-01",
+  "contact": "info@doetechsolutions.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc3"
   },
-  {
-    "userId": { "$oid": "6893a7d6e87f4023c2f9efab" },
-    "businesses": [
-      {
-        "businessName": "Ivy's Vegan Kitchen",
-        "description": "Plant-based meal delivery and catering services.",
-        "location": "777 Pure St, Tenthown, MT",
-        "dateEstablished": "2021-02-14",
-        "contact": "555-6767"
-      },
-      {
-        "businessName": "Purple Wellness Spa",
-        "description": "Luxury spa with holistic therapies and massages.",
-        "location": "888 Calm Blvd, Tenthown, MT",
-        "dateEstablished": "2017-07-20",
-        "contact": "555-9898"
-      }
-    ]
-  }
-]
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fb7"
+  },
+  "businessName": "Smith Bakery",
+  "description": "Artisanal breads and pastries",
+  "location": "New York, NY",
+  "dateEstablished": "2016-03-12",
+  "contact": "orders@smithbakery.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc4"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fb8"
+  },
+  "businessName": "Johnson Fitness",
+  "description": "Personal training and fitness coaching",
+  "location": "Austin, TX",
+  "dateEstablished": "2020-01-05",
+  "contact": "hello@johnsonfitness.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc5"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fb9"
+  },
+  "businessName": "Brown Digital Media",
+  "description": "Video production and digital marketing",
+  "location": "Miami, FL",
+  "dateEstablished": "2019-05-22",
+  "contact": "media@brownmedia.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc6"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fba"
+  },
+  "businessName": "Davis Auto Repair",
+  "description": "Car repair and maintenance services",
+  "location": "Seattle, WA",
+  "dateEstablished": "2014-09-18",
+  "contact": "support@davisautorepair.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc7"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fbc"
+  },
+  "businessName": "Green Landscaping",
+  "description": "Residential and commercial landscaping",
+  "location": "Las Vegas, NV",
+  "dateEstablished": "2013-06-11",
+  "contact": "green@landscaping.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc8"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fbd"
+  },
+  "businessName": "Black Boutique",
+  "description": "Clothing and accessories store",
+  "location": "Salt Lake City, UT",
+  "dateEstablished": "2017-02-14",
+  "contact": "sales@blackboutique.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc9"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fbe"
+  },
+  "businessName": "Blue Transport",
+  "description": "Freight and passenger transportation",
+  "location": "Boise, ID",
+  "dateEstablished": "2012-11-03",
+  "contact": "bookings@bluetransport.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fca"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fbf"
+  },
+  "businessName": "Purple Crafts",
+  "description": "Handmade crafts and gifts",
+  "location": "Billings, MT",
+  "dateEstablished": "2021-08-09",
+  "contact": "info@purplecrafts.com"
+}]

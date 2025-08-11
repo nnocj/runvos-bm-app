@@ -5,10 +5,12 @@ const fs = require('fs');
 require('dotenv').config();
 
 const swaggerDocument = JSON.parse(fs.readFileSync('./swagger.json', 'utf8'));
-const userRoutes = require('./routes/userInfoRoutes');
-const businessRoutes = require('./routes/businessInfoRoutes');
+const userRoutes = require('./routes/userRoutes.js');
+const businessRoutes = require('./routes/businessRoutes');
 const passport = require('./passport.js');
 const authRoutes = require('./routes/authRoutes');
+const productRoutes = require('./routes/productRoutes.js');
+const serviceRoutes = require('./routes/serviceRoutes.js');
 
 const app = express();
 app.use(express.json());
@@ -24,6 +26,8 @@ app.use('/api/user', userRoutes);
 app.use('/api/business', businessRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use('/auth', authRoutes);
+app.use('/api/product', productRoutes);
+app.use('/api/service', serviceRoutes);
 
 // ===== Start server =====
 app.listen(process.env.PORT || 3000, () => {

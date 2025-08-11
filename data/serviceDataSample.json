@@ -1,0 +1,220 @@
+[{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fda"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc1"
+  },
+  "name": "IT Strategy Consulting",
+  "description": "Guidance on aligning technology with business goals",
+  "price": 250
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fdb"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc1"
+  },
+  "name": "Process Optimization",
+  "description": "Improving operational efficiency through tailored solutions",
+  "price": 400
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fdc"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc2"
+  },
+  "name": "Custom Software Development",
+  "description": "End-to-end development of business applications",
+  "price": 3000
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fdd"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc2"
+  },
+  "name": "System Integration",
+  "description": "Integrating existing software and hardware systems",
+  "price": 1500
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fde"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc3"
+  },
+  "name": "Wedding Cake Design",
+  "description": "Custom wedding cakes made to order",
+  "price": 200
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fdf"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc3"
+  },
+  "name": "Bakery Catering",
+  "description": "Supplying baked goods for events and businesses",
+  "price": 500
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fe0"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc4"
+  },
+  "name": "Personal Training Sessions",
+  "description": "One-on-one fitness coaching tailored to client goals",
+  "price": 60
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fe1"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc4"
+  },
+  "name": "Group Fitness Classes",
+  "description": "Fun, high-energy classes for groups of all sizes",
+  "price": 20
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fe2"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc5"
+  },
+  "name": "Video Production",
+  "description": "Full-service video creation for marketing campaigns",
+  "price": 800
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fe3"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc5"
+  },
+  "name": "Social Media Marketing",
+  "description": "Targeted campaigns to boost online presence",
+  "price": 500
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fe4"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc6"
+  },
+  "name": "Engine Diagnostics",
+  "description": "Comprehensive engine health checks",
+  "price": 100
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fe5"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc6"
+  },
+  "name": "Routine Maintenance",
+  "description": "Oil changes, tire rotations, and general upkeep",
+  "price": 75
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fe6"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc7"
+  },
+  "name": "Lawn Care",
+  "description": "Regular mowing, edging, and fertilizing services",
+  "price": 50
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fe7"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc7"
+  },
+  "name": "Landscape Design",
+  "description": "Custom designs for outdoor spaces",
+  "price": 300
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fe8"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc8"
+  },
+  "name": "Wardrobe Consulting",
+  "description": "Personal styling and fashion advice",
+  "price": 120
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fe9"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc8"
+  },
+  "name": "Custom Clothing Alterations",
+  "description": "Tailoring clothes for perfect fit",
+  "price": 40
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fea"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc9"
+  },
+  "name": "Freight Logistics",
+  "description": "Planning and managing cargo transport",
+  "price": 2000
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8feb"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fc9"
+  },
+  "name": "Passenger Shuttle Service",
+  "description": "Comfortable transport for small or large groups",
+  "price": 35
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fec"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fca"
+  },
+  "name": "Craft Workshops",
+  "description": "Teaching craft-making skills to groups",
+  "price": 50
+},
+{
+  "_id": {
+    "$oid": "689a68a80b0ffefbbd9f8fed"
+  },
+  "businessId": {
+    "$oid": "689a66700b0ffefbbd9f8fca"
+  },
+  "name": "Custom Gift Wrapping",
+  "description": "Beautiful wrapping for special occasions",
+  "price": 15
+}]
