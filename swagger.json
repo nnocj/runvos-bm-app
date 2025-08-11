@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Business and User API",
-    "description": "API for managing users and businesses.",
+    "description": "API for managing users and businesses. Protected routes require JWT Bearer authentication.",
     "version": "1.0.0"
   },
   "servers": [
@@ -15,272 +15,206 @@
     "/api/user": {
       "get": {
         "summary": "Get all users",
+        "security": [
+          { "bearerAuth": [] }
+        ],
         "responses": {
-          "200": {
-            "description": "List of users"
-          }
+          "200": { "description": "List of users" }
         }
       },
       "post": {
         "summary": "Create a new user",
+        "security": [
+          { "bearerAuth": [] }
+        ],
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/User"
-              }
+              "schema": { "$ref": "#/components/schemas/User" }
             }
           }
         },
         "responses": {
-          "201": {
-            "description": "User created"
-          }
+          "201": { "description": "User created" }
         }
       }
     },
     "/api/user/{id}": {
       "get": {
         "summary": "Get a user by ID",
+        "security": [
+          { "bearerAuth": [] }
+        ],
         "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }
         ],
         "responses": {
-          "200": {
-            "description": "User data"
-          },
-          "404": {
-            "description": "User not found"
-          }
+          "200": { "description": "User data" },
+          "404": { "description": "User not found" }
         }
       },
       "put": {
         "summary": "Update a user by ID",
+        "security": [
+          { "bearerAuth": [] }
+        ],
         "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }
         ],
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/User"
-              }
+              "schema": { "$ref": "#/components/schemas/User" }
             }
           }
         },
         "responses": {
-          "200": {
-            "description": "User updated"
-          }
+          "200": { "description": "User updated" }
         }
       },
       "delete": {
         "summary": "Delete a user by ID",
+        "security": [
+          { "bearerAuth": [] }
+        ],
         "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }
         ],
         "responses": {
-          "204": {
-            "description": "User deleted"
-          }
+          "204": { "description": "User deleted" }
         }
       }
     },
     "/api/business": {
       "get": {
         "summary": "Get all businesses",
+        "security": [
+          { "bearerAuth": [] }
+        ],
         "responses": {
-          "200": {
-            "description": "List of businesses"
-          }
+          "200": { "description": "List of businesses" }
         }
       },
       "post": {
         "summary": "Create a new business",
+        "security": [
+          { "bearerAuth": [] }
+        ],
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Business"
-              }
+              "schema": { "$ref": "#/components/schemas/Business" }
             }
           }
         },
         "responses": {
-          "201": {
-            "description": "Business created"
-          }
+          "201": { "description": "Business created" }
         }
       }
     },
     "/api/business/{id}": {
       "get": {
         "summary": "Get a business by ID",
+        "security": [
+          { "bearerAuth": [] }
+        ],
         "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }
         ],
         "responses": {
-          "200": {
-            "description": "Business data"
-          },
-          "404": {
-            "description": "Business not found"
-          }
+          "200": { "description": "Business data" },
+          "404": { "description": "Business not found" }
         }
       },
       "put": {
         "summary": "Update a business by ID",
+        "security": [
+          { "bearerAuth": [] }
+        ],
         "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }
         ],
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Business"
-              }
+              "schema": { "$ref": "#/components/schemas/Business" }
             }
           }
         },
         "responses": {
-          "200": {
-            "description": "Business updated"
-          }
+          "200": { "description": "Business updated" }
         }
       },
       "delete": {
         "summary": "Delete a business by ID",
+        "security": [
+          { "bearerAuth": [] }
+        ],
         "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }
         ],
         "responses": {
-          "204": {
-            "description": "Business deleted"
-          }
+          "204": { "description": "Business deleted" }
         }
       }
     }
   },
   "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
     "schemas": {
       "User": {
         "type": "object",
         "properties": {
-          "firstName": {
-            "type": "string"
-          },
-          "lastName": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string",
-            "format": "email"
-          },
+          "firstName": { "type": "string" },
+          "lastName": { "type": "string" },
+          "email": { "type": "string", "format": "email" },
           "address": {
             "type": "object",
             "properties": {
-              "street": {
-                "type": "string"
-              },
-              "city": {
-                "type": "string"
-              },
-              "state": {
-                "type": "string"
-              },
-              "zip": {
-                "type": "string"
-              }
+              "street": { "type": "string" },
+              "city": { "type": "string" },
+              "state": { "type": "string" },
+              "zip": { "type": "string" }
             }
           },
-          "phone": {
-            "type": "string"
-          },
-          "birthdate": {
-            "type": "string",
-            "format": "date"
-          },
-          "gender": {
-            "type": "string"
-          }
+          "phone": { "type": "string" },
+          "birthdate": { "type": "string", "format": "date" },
+          "gender": { "type": "string" }
         },
         "required": ["firstName", "lastName", "email"]
       },
       "Business": {
         "type": "object",
         "properties": {
-          "userId": {
-            "type": "string"
-          },
+          "userId": { "type": "string" },
           "businesses": {
             "type": "array",
             "items": {
               "type": "object",
               "properties": {
-                "businessName": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "location": {
-                  "type": "string"
-                },
-                "dateEstablished": {
-                  "type": "string",
-                  "format": "date"
-                },
-                "contact": {
-                  "type": "string"
-                }
+                "businessName": { "type": "string" },
+                "description": { "type": "string" },
+                "location": { "type": "string" },
+                "dateEstablished": { "type": "string", "format": "date" },
+                "contact": { "type": "string" }
               },
-              "required": ["businessName", "description", "location", "dateEstablished", "contact"]
+              "required": [
+                "businessName",
+                "description",
+                "location",
+                "dateEstablished",
+                "contact"
+              ]
             }
           }
         },
