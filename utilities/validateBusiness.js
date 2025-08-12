@@ -6,9 +6,9 @@ const businessValidationRules = () => {
     body('userId')
       .notEmpty()
       .withMessage('User ID is required'),
-    body('businesses')
+    body('businessName')
       .notEmpty()
-      .withMessage('At least one business is required'),
+      .withMessage('Business name is required'),
   ];
 };
 
