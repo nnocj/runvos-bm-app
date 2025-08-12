@@ -24,11 +24,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // ===== API Routes =====
 app.use('/api/user', userRoutes);
-app.use('/api/business', businessRoutes);
+app.use('/api/businesses', businessRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use('/auth', authRoutes);
-app.use('/api/product', productRoutes);
-app.use('/api/service', serviceRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/services', serviceRoutes);
 
 // ===== Start server =====
 app.listen(process.env.PORT || 3000, () => {
