@@ -73,7 +73,7 @@ async function refresh(req, res) {
 
 // ===== Logout =====
 async function logout(req, res) {
-  const { refreshToken } = req.body;
+  const { refreshToken } = req.body || {};
   if (refreshToken) refreshTokens.delete(refreshToken);
   res.json({ message: 'Logout successful. Delete tokens on client.' });
 }
