@@ -53,7 +53,7 @@
     "/auth/google": {
       "get": {
         "summary": "Google OAuth login",
-        "description": "Redirects user to Google sign-in page.",
+        "description": "Redirects user to Google sign-in page. **Note:** This endpoint initiates an OAuth redirect and **cannot be run inside Swagger UI**. Please open this URL directly in your browser to sign in with Google.",
         "responses": { "302": { "description": "Redirect to Google login" } }
       }
     },
