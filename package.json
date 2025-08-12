@@ -1,5 +1,5 @@
 {
-  "name": "cse341-w3-w4",
+  "name": "Runvos Business Management App",
   "version": "1.0.0",
   "description": "An API to store users and their businesses",
   "main": "public/index.js",
