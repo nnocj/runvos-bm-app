@@ -1,4 +1,5 @@
-const router =  new require('express').Router();
+const express =  require('express')
+const router = express.Router();
 const businessController = require('../controller/businessController');
 const businessValidate = require('../utilities/validateBusiness.js');
 const  errorHandler = require('../middleware/handleErrors');

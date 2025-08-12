@@ -1,0 +1,2 @@
+The database work hand in hand with the test scripts to close client after running.
+to keep things well organised and modular, I'm exporting the connectToDB so that there will be no need to rewrite access to the database logic in areas such as testing.
