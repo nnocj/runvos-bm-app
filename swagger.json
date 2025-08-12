@@ -85,7 +85,7 @@
       }
     },
 
-    "/businesses": {
+    "/api/businesses": {
       "get": {
         "summary": "Get all businesses",
         "security": [{ "bearerAuth": [] }],
@@ -101,14 +101,14 @@
         "responses": { "201": { "description": "Business created" } }
       }
     },
-    "/businesses/my": {
+    "/api/businesses/my": {
       "get": {
         "summary": "Get all businesses owned by logged-in user",
         "security": [{ "bearerAuth": [] }],
         "responses": { "200": { "description": "List of user's businesses" } }
       }
     },
-    "/businesses/{id}": {
+    "/api/businesses/{id}": {
       "get": {
         "summary": "Get a business by ID",
         "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
@@ -130,7 +130,7 @@
       }
     },
 
-    "/products": {
+    "/api/products": {
       "post": {
         "summary": "Create a product",
         "security": [{ "bearerAuth": [] }],
@@ -141,14 +141,14 @@
         "responses": { "201": { "description": "Product created" } }
       }
     },
-    "/products/business/{businessId}": {
+    "/api/products/business/{businessId}": {
       "get": {
         "summary": "Get all products for a business",
         "parameters": [{ "name": "businessId", "in": "path", "required": true, "schema": { "type": "string" } }],
         "responses": { "200": { "description": "List of products" } }
       }
     },
-    "/products/{id}": {
+    "/api/products/{id}": {
       "put": {
         "summary": "Update a product",
         "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
@@ -164,7 +164,7 @@
       }
     },
 
-    "/services": {
+    "/api/services": {
       "post": {
         "summary": "Create a service",
         "security": [{ "bearerAuth": [] }],
@@ -175,14 +175,14 @@
         "responses": { "201": { "description": "Service created" } }
       }
     },
-    "/services/business/{businessId}": {
+    "/api/services/business/{businessId}": {
       "get": {
         "summary": "Get all services for a business",
         "parameters": [{ "name": "businessId", "in": "path", "required": true, "schema": { "type": "string" } }],
         "responses": { "200": { "description": "List of services" } }
       }
     },
-    "/services/{id}": {
+    "/api/services/{id}": {
       "put": {
         "summary": "Update a service",
         "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
