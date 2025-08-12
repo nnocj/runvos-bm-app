@@ -6,7 +6,7 @@ async function postBusiness(req, res) {
   try {
     const db = await connectToDB();
     const business = {
-      userId: new ObjectId(req.user.id), // from JWT payload
+      userId, //new ObjectId(req.user.id), // from JWT payload but for now i wont uuse that
       businessName: req.body.businessName,
       description: req.body.description,
       location: req.body.location,
