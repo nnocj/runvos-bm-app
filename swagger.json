@@ -229,13 +229,14 @@
       "Business": {
         "type": "object",
         "properties": {
+          "userId": { "type": "string" },                
           "businessName": { "type": "string" },
           "description": { "type": "string" },
           "location": { "type": "string" },
           "dateEstablished": { "type": "string", "format": "date" },
           "contact": { "type": "string" }
         },
-        "required": ["businessName", "description"]
+        "required": ["userId", "businessName", "description"]
       },
       "Product": {
         "type": "object",
