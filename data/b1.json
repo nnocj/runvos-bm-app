@@ -1,0 +1,130 @@
+[{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc1"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fb6"
+  },
+  "businessName": "Doe Consulting",
+  "description": "IT and business strategy consulting services",
+  "location": "San Francisco, CA",
+  "dateEstablished": "2015-04-15",
+  "contact": "contact@doeconsulting.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc2"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fb6"
+  },
+  "businessName": "Doe Tech Solutions",
+  "description": "Custom software development for small businesses",
+  "location": "Los Angeles, CA",
+  "dateEstablished": "2018-07-01",
+  "contact": "info@doetechsolutions.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc3"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fb7"
+  },
+  "businessName": "Smith Bakery",
+  "description": "Artisanal breads and pastries",
+  "location": "New York, NY",
+  "dateEstablished": "2016-03-12",
+  "contact": "orders@smithbakery.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc4"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fb8"
+  },
+  "businessName": "Johnson Fitness",
+  "description": "Personal training and fitness coaching",
+  "location": "Austin, TX",
+  "dateEstablished": "2020-01-05",
+  "contact": "hello@johnsonfitness.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc5"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fb9"
+  },
+  "businessName": "Brown Digital Media",
+  "description": "Video production and digital marketing",
+  "location": "Miami, FL",
+  "dateEstablished": "2019-05-22",
+  "contact": "media@brownmedia.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc6"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fba"
+  },
+  "businessName": "Davis Auto Repair",
+  "description": "Car repair and maintenance services",
+  "location": "Seattle, WA",
+  "dateEstablished": "2014-09-18",
+  "contact": "support@davisautorepair.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc7"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fbc"
+  },
+  "businessName": "Green Landscaping",
+  "description": "Residential and commercial landscaping",
+  "location": "Las Vegas, NV",
+  "dateEstablished": "2013-06-11",
+  "contact": "green@landscaping.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc8"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fbd"
+  },
+  "businessName": "Black Boutique",
+  "description": "Clothing and accessories store",
+  "location": "Salt Lake City, UT",
+  "dateEstablished": "2017-02-14",
+  "contact": "sales@blackboutique.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fc9"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fbe"
+  },
+  "businessName": "Blue Transport",
+  "description": "Freight and passenger transportation",
+  "location": "Boise, ID",
+  "dateEstablished": "2012-11-03",
+  "contact": "bookings@bluetransport.com"
+},
+{
+  "_id": {
+    "$oid": "689a66700b0ffefbbd9f8fca"
+  },
+  "userId": {
+    "$oid": "689a553d0b0ffefbbd9f8fbf"
+  },
+  "businessName": "Purple Crafts",
+  "description": "Handmade crafts and gifts",
+  "location": "Billings, MT",
+  "dateEstablished": "2021-08-09",
+  "contact": "info@purplecrafts.com"
+}]
