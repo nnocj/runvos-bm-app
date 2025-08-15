@@ -28,10 +28,12 @@ app.use(express.json());
 
 //allow request from my local frontend
 app.use(cors({
-    origin: ['http://127.0.0.1:5500', 'http://localhost:5500'], // replace with your frontend URL
+    origin: ['http://127.0.0.1:5500', 'http://localhost:5500', 'https://nnocj.github.io/richslice/','http://localhost:3000'], // replace with your frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
+
+
 
 // Initialize Passport for OAuth
 app.use(passport.initialize());

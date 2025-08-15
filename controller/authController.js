@@ -104,22 +104,31 @@ async function googleCallback(req, res) {
 
     const tokens = generateTokens(existingUser);
 
-    // If this request came from a popup, send tokens via postMessage script
-    //I'm sending this so that the frontend can receive the tokens
-    res.setHeader("Content-Type", "text/html");
-    res.send(`
-      <script>
-        (function() {
-          const tokens = ${JSON.stringify(tokens)};
-          if (window.opener && typeof window.opener.postMessage === "function") {
-            window.opener.postMessage({ type: "oauthTokens", ...tokens }, "*");
-          }
-          // Close popup
-          window.close();
-        })();
-      </script>
-    `);
+    // Detect if request came from popup or redirect
+    // Option 1: If popup — window.opener exists
+    // Option 2: If redirect — check for ?redirect=true query or absence of opener
+    const isRedirect = req.query.redirect === 'true';
 
+    if (isRedirect) {
+      // ✅ Redirect flow — send tokens to frontend route
+      // In production, use a short-lived code instead of sending tokens in URL directly
+      const query = new URLSearchParams(tokens).toString();
+      return res.redirect(`${process.env.FRONTEND_URL}/oauth-success?${query}`);
+    } else {
+      // ✅ Popup flow — postMessage to opener
+      res.setHeader("Content-Type", "text/html");
+      return res.send(`
+        <script>
+          (function() {
+            const tokens = ${JSON.stringify(tokens)};
+            if (window.opener && typeof window.opener.postMessage === "function") {
+              window.opener.postMessage({ type: "oauthTokens", ...tokens }, "*");
+            }
+            window.close();
+          })();
+        </script>
+      `);
+    }
   } catch (err) {
     console.error("Google callback error:", err);
     res.status(500).json({ error: 'Server error' });
