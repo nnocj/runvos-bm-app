@@ -19,5 +19,6 @@ router.post('/logout', validateAuth.logoutValidationRules(), validateAuth.valida
 router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 router.get('/google/callback', passport.authenticate('google', { session: false, failureRedirect: '/auth/failure' }), errorHandler.generalHandleErrors(authController.googleCallback));
 router.get('/failure', (req, res) => res.status(401).json({ error: 'Google login failed' }));
+router.get('/silent', errorHandler.generalHandleErrors(authController.silentGoogleAuth));
 
 module.exports = router;

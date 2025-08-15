@@ -107,4 +107,37 @@ async function googleCallback(req, res) {
   }
 }
 
-module.exports = { register, login, refresh, logout, googleCallback };
+// Silent Google auth check
+async function silentGoogleAuth(req, res) {
+  try {
+    // If using cookies for JWT
+    const token = req.cookies?.accessToken;
+    if (token) {
+      try {
+        const payload = jwt.verify(token, process.env.JWT_SECRET);
+        const db = await connectToDB();
+        const user = await db.collection('users').findOne({ email: payload.email });
+        if (user) {
+          const tokens = generateTokens(user);
+          return res.json(tokens);
+        }
+      } catch (e) {
+        // Token invalid or expired
+      }
+    }
+
+    // Or, if using session-based passport
+    if (req.isAuthenticated && req.isAuthenticated()) {
+      const tokens = generateTokens(req.user);
+      return res.json(tokens);
+    }
+
+    // Not authenticated
+    return res.status(401).json({ error: 'No active Google session' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error during silent auth' });
+  }
+}
+
+module.exports = { register, login, refresh, logout, googleCallback, silentGoogleAuth };
