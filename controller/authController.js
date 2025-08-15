@@ -82,12 +82,13 @@ async function logout(req, res) {
 async function googleCallback(req, res) {
   try {
     const db = await connectToDB();
+
     let existingUser = await db.collection('users').findOne({ email: req.user.email });
 
     if (!existingUser) {
       const newUser = {
-        firstName: req.user.firstName || '',
-        lastName: req.user.lastName || '',
+        firstName: req.user.firstName || (req.user.name?.givenName ?? ''),
+        lastName: req.user.lastName || (req.user.name?.familyName ?? ''),
         email: req.user.email,
         googleId: req.user.id,
         password: null,
@@ -96,16 +97,35 @@ async function googleCallback(req, res) {
         birthdate: null,
         gender: ''
       };
+
       const result = await db.collection('users').insertOne(newUser);
       existingUser = { ...newUser, _id: result.insertedId };
     }
 
     const tokens = generateTokens(existingUser);
-    res.json(tokens);
+
+    // If this request came from a popup, send tokens via postMessage script
+    //I'm sending this so that the frontend can receive the tokens
+    res.setHeader("Content-Type", "text/html");
+    res.send(`
+      <script>
+        (function() {
+          const tokens = ${JSON.stringify(tokens)};
+          if (window.opener && typeof window.opener.postMessage === "function") {
+            window.opener.postMessage({ type: "oauthTokens", ...tokens }, "*");
+          }
+          // Close popup
+          window.close();
+        })();
+      </script>
+    `);
+
   } catch (err) {
+    console.error("Google callback error:", err);
     res.status(500).json({ error: 'Server error' });
   }
 }
+
 
 // Silent Google auth check
 async function silentGoogleAuth(req, res) {
